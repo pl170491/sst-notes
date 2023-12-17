@@ -9,7 +9,7 @@ export const main = handler(async (event) => {
   const description = "Scratch charge";
 
   // Load our secret key
-  const stripe = new Stripe(Config.STRIPE_SECRET_KEY, {
+  const stripe = new Stripe((Config as any).STRIPE_SECRET_KEY, {
     apiVersion: "2023-10-16",
   });
 
